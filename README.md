@@ -40,7 +40,7 @@
    - `bot.py`
    - `requirements.txt`
    - `docker-compose.yml`
-   - `.env` (copy from `.env.example` and fill in)
+   - `.env` (copy from `env.example` and fill in) #
 3. Container Manager → **Project** → **Create** → select the folder
 4. Done! Check logs in Container Manager → Project → Log
 
