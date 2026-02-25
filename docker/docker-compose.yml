@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  note_bot:
+    image: python:3.11-slim
+    container_name: tg_note_bot
+    restart: unless-stopped
+    extra_hosts:
+      - "nas:host-gateway"
+    env_file:
+      - .env
+    volumes:
+      - ./bot.py:/app/bot.py:ro
+      - ./requirements.txt:/app/requirements.txt:ro
+      - /tmp/tg_bot_files:/tmp/tg_bot_files
+    working_dir: /app
+    command: >
+      sh -c "pip install --no-cache-dir -r requirements.txt -q &&
+             python3 -u bot.py"
