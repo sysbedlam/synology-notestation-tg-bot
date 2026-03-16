@@ -12,7 +12,6 @@ services:
     volumes:
       - ./bot.py:/app/bot.py:ro
       - ./requirements.txt:/app/requirements.txt:ro
-      - /tmp/tg_bot_files:/tmp/tg_bot_files
     working_dir: /app
     command: >
       sh -c "pip install --no-cache-dir -r requirements.txt -q &&
