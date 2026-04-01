@@ -15,4 +15,4 @@ services:
     working_dir: /app
     command: >
       sh -c "pip install --no-cache-dir -r requirements.txt -q &&
-             python3 -u bot.py"
+             exec python3 -u bot.py"
